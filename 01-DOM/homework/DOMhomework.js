@@ -50,24 +50,38 @@ ToDo.prototype.completeToDo = function () {
 //    7) Agregar 'toDoText' como hijo de 'toDoShell'
 //    8) Devolver la variable toDoShell
 
+/*    Investigá sobre el tipo 'checkbox' del elemento input y realizar lo siguiente en la función 'buildToDo':
+        a) Crer un checkbox en la función 'buildToDo'
+        b) Asignarle como id a dicho checkbox el valor del index y quitar el id del index de toDoText
+        c) Agregarle al checkbox el 'click' event listener de completeToDo y quitárle el event listener a toDoText
+        d) Asignarle la clase 'completeCheckbox' al checkbox
+        e) Dentro del bloque 'if' de la función buildToDo, si es true, setear el atributo 'checked' en true en el checkbox
+        f) Agregar el checkbox sobre el elemento 'toDoShell'
+*/
 
 function buildToDo(todo, index) {
   // Tu código acá:
 
   var toDoShell = document.createElement('div');
   var toDoText = document.createElement('span');
+  var checkbox = document.createElement("INPUT");
+
+  checkbox.setAttribute("type", "checkbox");
 
   toDoShell.className = 'toDoShell';
-  toDoText.id = index;
+  checkbox.id = index;
+  checkbox.className = "completeCheckbox";
 
   toDoText.innerHTML = todo.description;
 
   if (todo.complete) {
     toDoText.className = 'completeText';
+    checkbox.checked = true;
   }
   
   toDoShell.appendChild(toDoText);
-  toDoText.addEventListener('click',completeToDo);
+  toDoShell.appendChild(checkbox);
+  checkbox.addEventListener('click',completeToDo);
 
   return toDoShell;
 }
@@ -94,9 +108,11 @@ function buildToDos(toDos) {
 //     línea para hacer el llamado a esta funcion (displayToDos)
 //  6) Abrir o en el caso de ya tenerlo abierto, recargar, la página
 
+// *
 function displayToDos() {
   // Tu código acá:
   var todo = document.querySelector('#toDoContainer');
+
   todo.innerHTML = "";
   var array = buildToDos(toDoItems);
   for (let i = 0; i < array.length; i++) {
