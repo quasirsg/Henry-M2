@@ -1,0 +1,9 @@
+
+	* Framework: Es un entorno de trabajo, una estructura ya elaborada que nos facilita la
+    creación de un proyecto al ofrecer soluciones rápidas y herramientas ya realizadas para
+    no tener que reinventar la rueda.
+	* Preprocesador: Se trata de una herramienta que ofrece una syntaxis mas elaborada para
+    un entorno en espesificio, como lo podria ser CSS. Lo mas resaltable de un Preprocesador
+    es que simplifica lineas y lineas de codigo o texto,haciendo el codigo mas legible.
+	* Responsive website: Es una tecnica de diseño web que busca la correcta visualización en distintos
+    dispositivos.
