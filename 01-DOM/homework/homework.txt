@@ -1,0 +1,8 @@
+
+	* DOM : es una interfaz que implementan los navegadores para que 
+    podamos interactuar con los elementos HTML.
+
+	* DOM element selectors: sirve para devolver elementos del DOM.
+
+	* DOM events: Se refiere a la ejecución de una función que se desencadena por determinada acción
+    como podria ser, clickear un botón.
