@@ -57,7 +57,7 @@ A partir de una paǵina que simula una noticia sobre _Música 8D_ es necesario t
 
 * Observar cómo debe quedar el [diseño final para Desktop](responsive-web/diseño/home-desktop.png). Es necesario crear la barra de navegación y la imagen del header que están faltando. En el archivo `index.html` se indica en que partes debe ir cada uno
 
-* Utilizar el archivo `navigation.less` para darle el estilo correspondiente a la barra de navegación
+* Utilizar el archivo `navigation.less` para darle el estilo correspondiente a la barra de navegación 
 
 * Utilizar el archivo `home-page.less` para darle el estilo correspondiente a la imagen del header
 

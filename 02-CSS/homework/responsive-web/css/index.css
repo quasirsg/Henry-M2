@@ -1,3 +1,11 @@
+.img {
+  border-radius: 20px;
+  height: 100%;
+}
+.elements-to-center {
+  display: flex;
+  justify-content: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,8 +168,6 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-<<<<<<< HEAD
-=======
 .nav {
   background: #F6F6F6;
   min-height: 100px;
@@ -183,7 +189,6 @@ p {
   font-size: 15px;
   padding-right: 30px;
 }
->>>>>>> 187c67a4ce5952d91dc3b8b3898d06767a898dfd
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -199,6 +204,11 @@ footer {
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  margin: 8px 2.5%;
+  border-radius: 20px;
+  height: 100%;
 }
 .home .music-images {
   display: flex;

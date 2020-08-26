@@ -1,0 +1,8 @@
+.img {
+  border-radius: 20px;
+  height: 100%;
+}
+.elements-to-center {
+  display: flex;
+  justify-content: center;
+}
