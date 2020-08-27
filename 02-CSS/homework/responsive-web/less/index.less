@@ -6,3 +6,36 @@
 @import 'navigation';
 @import 'footer';
 @import 'home-page';
+
+
+
+@media @phone{
+    body{
+        width: 100%;
+        .nav nav{
+            margin-top: 3% ;
+            a{
+                font-size:10px ;
+                padding-right: 10px ;
+            }
+        }
+        .home .intro img{
+            width: 96%;
+        }
+        .actual{
+            padding: 15px !important;
+    
+            flex-flow: column-reverse wrap !important;
+
+            .actual-text{
+                width: 100% !important;
+            }
+
+            .actual-img {
+                width: 100% !important;
+                margin-left: 0px !important;
+            }
+        }
+    }
+
+  }
