@@ -22,3 +22,16 @@ $("#search").click(function () {
     }
   });
 });
+
+//Delete by id
+$("#delete").click(function () {
+    var id = $("#inputDelete").val();
+    $.ajax({
+        url: `http://localhost:5000/amigos/${id}`,
+        type: 'DELETE',
+        success: function(result) {
+            $("#sucess").text('amigo borrado con exito');
+        }
+    });
+});
+
