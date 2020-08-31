@@ -9,7 +9,16 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-  
+   if(matchFunc(startEl)){
+     resultSet.push(startEl);
+   }
+
+   for (let i = 0; i < startEl.children.length; i++) {
+      var collectedElements = traverseDomAndCollectElements(matchFunc,startEl.children[i]);
+      resultSet = resultSet.concat(collectedElements)
+   }
+
+   return resultSet;
 };
 
 // Detecta y devuelve el tipo de selector
@@ -24,6 +33,8 @@ var selectorTypeMatcher = function(selector) {
     return 'class';
   }else if(selector.split('.').length > 1){
     return 'tag.class';
+  }else if(selector.split('>').length > 1 ){
+    return('childCombinator');
   }
   return 'tag';
 };
@@ -37,13 +48,32 @@ var matchFunctionMaker = function(selector) {
   var selectorType = selectorTypeMatcher(selector);
   var matchFunction;
   if (selectorType === "id") { 
-   
+    var matchFunction = function (el) {
+      return el.id && ('#'+el.id === selector);
+    };
   } else if (selectorType === "class") {
-    
+    var matchFunction = function (el) {
+      for (let i = 0; i < el.classList.length; i++) {
+        if ('.'+el.classList[i] === selector) {
+          return true;
+        }
+
+      }
+      return false;
+    };
   } else if (selectorType === "tag.class") {
-    
+    var matchFunction = function (el) {
+      var [tag, clase] = selector.split('.');
+      return matchFunctionMaker(tag)(el) && matchFunctionMaker('.'+clase)(el)
+    };
   } else if (selectorType === "tag") {
-    
+    var matchFunction = function (el) {
+      return el.tagName && (el.tagName.toLowerCase() === selector.toLowerCase());
+    };
+  }else if (selectorType === "childCombinator") {
+    var matchFunction = function (el) {
+      return true;
+    };
   }
   return matchFunction;
 };
