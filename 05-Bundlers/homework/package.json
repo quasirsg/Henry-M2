@@ -5,10 +5,15 @@
   "main": "index.js",
   "author": "Henry",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack"
   },
   "dependencies": {
     "express": "^4.12.3",
     "socket.io": "^1.7.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
