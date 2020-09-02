@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px 40px 20px 50px ;
+  
+}
+.card-title{
+  grid-column-start: 3;
+
+  grid-row-start: 2;
+ 
+}
+.card-min{
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.card-max{
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+.img-card{
+  grid-column-start: 5;
+  grid-row-start: 3;
+  
+}
+.card-img{
+  width: 70px;
+  height: 70px;
+  
+}
