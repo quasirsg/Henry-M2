@@ -1,10 +1,11 @@
 import React from "react";
 import Card from './Card.jsx';
+import s from "./Cards.module.css";
 export default function Cards(props) {
   // acá va tu código
   // tip, podés usar un map
   return (
-    <div>
+    <div className={s.cardsContainer}>
       {props.cities.map((city, i) => (
         <Card
           name={city.name}
