@@ -1,3 +1,4 @@
+
 .card {
     width: 18rem;
     height: 10rem !important;
@@ -6,7 +7,11 @@
     grid-template-columns:50% 50% ;
     grid-template-rows:100%;
 }
-
+.buttonX{
+    justify-self: end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
 
 .cardBody{
     font-size:15px;
@@ -14,7 +19,25 @@
     grid-row-start: 1;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 30%80%;
 }
 .cardImg{
     grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:1 ;
+    justify-self: end;
+    align-self: end;
+    height: 137px;
+
 }
+.cardTitle{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+}
+.cardBodyItems{
+    justify-self: center;
+    align-self: center;
+    grid-row-start: 2;
+}
+
