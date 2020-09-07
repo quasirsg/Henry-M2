@@ -3,7 +3,7 @@ import React from "react";
 import "./Nav.css";
 import  {Navbar,NavDropdown,Form,FormControl,Button} from "react-bootstrap"
 
-function Nav() {
+function Nav({ onSearch }) {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -31,6 +31,6 @@ function Nav() {
       </Navbar.Collapse>
     </Navbar>
   );
-};
+}
 
 export default Nav;
